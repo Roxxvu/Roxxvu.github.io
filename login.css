@@ -21,7 +21,7 @@ background-image:url('images/21.png');
 
 h1{
 	text-align:center;
-	color:#8000ff;
+	color:bisque;
 	font-size:35px;
 	margin-top:26px;
 	position:top;
@@ -35,10 +35,10 @@ h1{
   top: 55%;
   left: 50%;
   margin: -184px 0px 0px -155px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(105, 105, 105, 0.5);
   padding: 20px 30px;
   border-radius: 5px;
-  box-shadow: 0px 1px 0px rgba(0,0,0,0.3),inset 0px 1px 0px rgba(255,255,255,0.07)
+  box-shadow: 0px 1px 0px rgba(107, 97, 97, 0.3),inset 0px 1px 0px rgba(144, 119, 119, 0.07)
 }
 input{
  width:250px;
@@ -47,11 +47,28 @@ input{
  
 }
 
+.forgot-pass{
+	font-size: 90%;
+	padding-top: 8%;
+	padding-left: 8.5%;
+
+}
+a{
+	color: antiquewhite;
+}
+a:link{ text-decoration: none;}
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; color: rgba(255, 0, 0, 0.711);}
+
+a:active { text-decoration: none; }
 
 
 input[type="submit"]{
-   background: #3399ff;
-  border: 0;
+   background-color:transparent;
+   outline-color: whitesmoke;
+   border: 1px solid whitesmoke;
   width: 250px;
   height: 40px;
   border-radius: 3px;
@@ -60,6 +77,19 @@ input[type="submit"]{
   transition: background 0.4s linear;
   font-family: "Poppins", sans-serif;
 }
+
+input[type="submit"]:hover{
+	background: #C8A2C8;
+	outline-color: azure;
+   border: 0;
+   width: 250px;
+   height: 40px;
+   border-radius: 3px;
+   color: white;
+   cursor: pointer;
+   transition: background 0.4s linear;
+   font-family: "Poppins", sans-serif;
+ }
 
 .contenido {
 	width:100%;
