@@ -1,9 +1,37 @@
 <!DOCTYPE html>
+<html>
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <link href="login.css" rel="stylesheet" type="text/css">
+
+<script>
+	function validateForm() {
+	  let x1 = document.forms["myForm"]["username"].value;
+	  let x = x1.toLowerCase();
+	  let y = document.forms["myForm"]["password"].value;
+	  if (x == "") {
+		alert("Name must be filled out");
+		return false;
+	  }
+	  if (y == "") {
+        alert("Password must be filled out");
+	    return false;}
+
+	  if (x != "shalu" || y != "2616") {
+		alert("Enter right username and password");
+		return false;
+      }
+
+	  else{
+		alert("login success");
+		return true;
+	  }
+
+
+	}
+	</script>
 
 </head>
 <body>
@@ -17,11 +45,10 @@
 	<li></li>
 	<li></li>
 	</ul>
-<form action="forgotpassword.html" method="POST">
-
+<form name="myForm" action="main.html" onsubmit="return validateForm()" method="post">
 <h1>Login form</h1><br>
-<input type="username" name="username" id="username" placeholder="Username" required><br><br>
-<input type="password" name="password" id="password" placeholder="Password" required><br><br>
+<input type="username" name="username" id="username" placeholder="Username"><br><br>
+<input type="password" name="password" id="password" placeholder="Password"><br><br>
 <input type="submit" name="submit" id="submit"><br><br>
 <div class="forgot-pass">
 <a href="forgotpassword.html">Click me to know the password</a><br></div>
