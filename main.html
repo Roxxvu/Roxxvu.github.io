@@ -5,10 +5,22 @@
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <style type="text/css">
+    html {
+  height: 100%;
+  overflow: hidden;
+}
     body {
     background: rgb(255, 182, 193);
     color: rgb(255, 0, 0);
-    font-family: sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    margin:0;
+  padding:0;
+	perspective: 1px;
+	transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .rhombus2 {
@@ -107,11 +119,125 @@
 .content{
     display: none;
 }
+
+h1 {
+   font-size: 200%
+}
+
+h3{
+    font-size: 130%;
+}
+
+h4{
+    font-size: 140%;
+}
+
+p {
+  font-size: 140%;
+  line-height: 150%;
+  color: #333;
+}
+
+.slide {
+  position: relative;
+  padding: 25vh 10%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, .7);
+	transform-style: inherit;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  width: 320px;
+  height: 240px;
+  transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+img:last-of-type {
+  transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+}
+
+.slide:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7);
+}
+
+.title {
+  width: 50%;
+  padding: 5%;
+  border-radius: 5px;
+  background: rgba(240,230,220, .7);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+}
+
+.slide:nth-child(2n) .title {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.slide:nth-child(2n+1) .title {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.slide, .slide:before {
+  background: 50% 50% / cover;  
+}
+
+.header {
+  text-align: center;
+  font-size: 175%;
+  color: #fff;
+  text-shadow: 0 2px 2px #000;
+}
+
+#title {
+  background-image: url("images/23.jpg");
+  z-index:2;
+}
+
+#title h1 {
+ transform: translateZ(.25px) scale(.75);
+ transform-origin: 50% 100%;
+
+}
+
+#slide1:before {
+  background-image: url("");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide2 {
+  background-image: url("images/25.png");
+  z-index:2;
+}
+
+#slide3:before {
+  background-image: url("");
+  transform: translateZ(-1px) scale(2);
+}
+
+#slide4 {
+  background: #f8aed4;
+}
 </style>
 <script>
  $(window).on('load', function(){
 
-    $(".rhombus2").fadeOut(10000);
+    $(".rhombus2").fadeOut(20000);
     $(".content").show(20000);
 
  })
@@ -124,8 +250,41 @@
         <div class="circle22"></div>
     </div>
     <div class="content">
-        <h1>hello world!</h1>
+        <div id="title" class="slide header">
+            <h1>My Love Story in Short</h1>
+          </div>
+          
+          <div id="slide1" class="slide">
+            <div class="title">
+              <h1>June 1,2022</h1>
+              <p>The Day when we both met, i was fascinated by her personality, and knew i cant impress her. But later, I did hehe.</p>
+            </div>
+          </div>
+          
+          <div id="slide2" class="slide">
+            <div class="title">
+              <h1>September 20,2022 </h1>
+              <p>The day we successfully became together as husband and wife. It's a memorable day with many memories to cherish for.</p>
+            </div>
+            <img src="images/IMG_1467.jpg">
+            <img src="images/img_1470.jpg"> 
+          </div>
+          
+          <div id="slide3" class="slide">
+            <div class="title">
+              <h1>February 24, 2023</h1>
+              <p>Today, when she will see this website for which i was literally pulled my brains out. lol.</p>
+            </div>
+          </div>
+          
+          <div id="slide4" class="slide header">
+            <h3>I hope you like it jaanu.</h3>
+            <h4> There is a lot to include, will do in future. Till then, Adios.</h4>
+              <h1>NAAN UNNAI KADHALIKIREN PONDATTI </h1>
+          </div>
+
     </div>
+
 </body>
 
 </html>
