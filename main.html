@@ -5,6 +5,7 @@
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <style type="text/css">
+
     html {
   height: 100%;
   overflow: hidden;
@@ -233,6 +234,38 @@ img:last-of-type {
 #slide4 {
   background: #f8aed4;
 }
+
+
+/*-----------------------style of navbAR*/
+.navbar {
+  overflow: hidden;
+  background-color: rgb(134, 79, 134);
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  padding-left: 165px;
+  padding-right: 165px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: mediumorchid;
+  color: white;
+}
+/*-----------------------style of navbAR*/
 </style>
 <script>
  $(window).on('load', function(){
@@ -249,7 +282,9 @@ img:last-of-type {
         <div class="circle21"></div>
         <div class="circle22"></div>
     </div>
+
     <div class="content">
+      
         <div id="title" class="slide header">
             <h1>My Love Story in Short</h1>
           </div>
@@ -279,11 +314,21 @@ img:last-of-type {
           
           <div id="slide4" class="slide header">
             <h3>I hope you like it jaanu.</h3>
-            <h4> There is a lot to include, will do in future. Till then, Adios.</h4>
               <h1>NAAN UNNAI KADHALIKIREN PONDATTI </h1>
-          </div>
+              <h4>Enjoy the new additions :)</h4>
+              
+          </div>  
+          <div class="navbar">
+              <a href="main.html" class="active">Home</a>
+              <a href="gallery.html">Gallery</a>
+              <a href="lyrics.html">Lyrics</a>
+              <a href="about.html">About</a>
+              
+         </div>  
 
-    </div>
+         </div>
+ 
+
 
 </body>
 
