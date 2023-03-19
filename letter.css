@@ -1,0 +1,36 @@
+.navbar {
+    overflow: hidden;
+    background-color: rgb(134, 79, 134);
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 0px;
+    position : fixed;
+    font-family: 'La Belle Aurore', cursive;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    padding-left: 122px;
+    padding-right: 122px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background: #f1f1f1;
+    color: black;
+  }
+  
+  .navbar a.active {
+    background-color: mediumorchid;
+    color: white;
+  }
+
+  body{
+    background-color: rgb(251, 213, 219);
+  }
+  /*-----------------------style of navbAR*/
